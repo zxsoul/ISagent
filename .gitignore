@@ -1,0 +1,99 @@
+0# ============================================================
+# ISagent 项目 .gitignore
+# 基于参考项目 super_biz_agent_py 定制
+# ============================================================
+
+# ---------- 1. Python 编译缓存 ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ---------- 2. 构建产物 ----------
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ---------- 3. 虚拟环境 ----------
+# uv / venv / conda 虚拟环境目录
+.venv/
+venv/
+env/
+ENV/
+
+# ---------- 4. 包管理器锁定文件 ----------
+# uv.lock 体积很大（1MB+），如果团队统一环境则提交，否则忽略
+# 个人开发建议忽略，团队项目建议提交
+uv.lock
+
+# ---------- 5. IDE / 编辑器 ----------
+# JetBrains (PyCharm)
+.idea/
+# VS Code
+.vscode/
+# 临时文件
+*.swp
+*.swo
+*~
+
+# ---------- 6. 环境变量 / 密钥 ----------
+# ⚠️ 极其重要！绝不能提交到 Git！
+.env
+.env.local
+.env.*.local
+
+# ---------- 7. 日志 ----------
+logs/
+*.log
+*.pid
+
+# ---------- 8. 数据库 ----------
+*.db
+*.sqlite
+*.sqlite3
+
+# ---------- 9. 向量数据库 (ChromaDB) ----------
+# ChromaDB 会生成本地持久化数据，体积大且常变
+chromadb/
+chroma_data/
+chromadb_data/
+
+# ---------- 10. Milvus / Docker ----------
+volumes/
+
+# ---------- 11. 上传临时文件 ----------
+uploads/
+*.tmp
+*.temp
+temp/
+tmp/
+
+# ---------- 12. 操作系统文件 ----------
+.DS_Store
+Thumbs.db
+
+# ---------- 13. 测试 / 覆盖率 ----------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ---------- 14. 类型检查 / 代码检查缓存 ----------
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+
